@@ -30,9 +30,9 @@ spring:
     hikari:
       connection-timeout: 2000
       maximum-pool-size: 5
-  sql:
-    init:
-      mode: always
+#  sql:
+#    init:
+#      mode: always #this initialize the non-embedded data source using schema script, not need it with flyway
 
 management:
   endpoints:
