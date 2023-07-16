@@ -107,18 +107,18 @@
 					<layers>
 						<enabled>true</enabled>
 					</layers>
-					<image>
-						<name>ghcr.io/cvdejan/${project.artifactId}:${project.version}</name>
-						<publish>true</publish>
-						<builder>dashaun/builder:tiny</builder>
-					</image>
-					<docker>
-						<publishRegistry>
-							<username>cvdejan</username>
-							<password>${token}</password>
-							<url>https://ghcr.io</url>
-						</publishRegistry>
-					</docker>
+<!--					<image>-->
+<!--						<name>ghcr.io/cvdejan/${project.artifactId}:${project.version}</name>-->
+<!--						<publish>true</publish>-->
+<!--						<builder>dashaun/builder:tiny</builder>-->
+<!--					</image>-->
+<!--					<docker>-->
+<!--						<publishRegistry>-->
+<!--							<username>cvdejan</username>-->
+<!--							<password>${token}</password>-->
+<!--							<url>https://ghcr.io</url>-->
+<!--						</publishRegistry>-->
+<!--					</docker>-->
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
