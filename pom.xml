@@ -107,11 +107,12 @@
 					<layers>
 						<enabled>true</enabled>
 					</layers>
-<!--					<image>-->
+					<image>
 <!--						<name>ghcr.io/cvdejan/${project.artifactId}:${project.version}</name>-->
-<!--						<publish>true</publish>-->
-<!--						<builder>dashaun/builder:tiny</builder>-->
-<!--					</image>-->
+<!--						<name>${project.artifactId}</name>-->
+						<builder>dashaun/builder:tiny</builder>
+						<publish>false</publish>
+					</image>
 <!--					<docker>-->
 <!--						<publishRegistry>-->
 <!--							<username>cvdejan</username>-->
