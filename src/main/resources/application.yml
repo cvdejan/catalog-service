@@ -17,7 +17,7 @@ spring:
     import: "optional:configserver:"
   cloud:
     config:
-      uri: http://localhost:8888
+      uri: ${SPRING_CLOUD_CONFIG_URI:http://localhost:8888}
       request-connect-timeout: 5000 # 5s
       request-read-timeout: 5000 # 5s
       fail-fast: false # In production, set to true
@@ -33,6 +33,11 @@ spring:
     hikari:
       connection-timeout: 2000
       maximum-pool-size: 5
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/PolarBookshop
 
 #  sql:
 #    init:
@@ -46,3 +51,4 @@ management:
 
 polar:
   greeting: Welcome to the local book catalog!
+
