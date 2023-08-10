@@ -43,12 +43,33 @@ spring:
 #    init:
 #      mode: always #this initialize the non-embedded data source using schema script, not need it with flyway
 
+info:
+  system: Polar Bookshop
+
 management:
   endpoints:
     web:
       exposure:
-        include: refresh
+        include: refresh, bindings, configprops, env, flyway, functions, health, heapdump, info, loggers, mappings, prometheus
+  endpoint:
+    health:
+      show-details: always
+      show-components: always
+      probes:
+        enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
+  info:
+    env:
+      enabled: true
+    java:
+      enabled: true
+    os:
+      enabled: true
 
 polar:
   greeting: Welcome to the local book catalog!
-
+logging:
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
