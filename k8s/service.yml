@@ -5,10 +5,11 @@ metadata:
   labels:
     app: catalog-service
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: catalog-service
   ports:
     - protocol: TCP
       port: 80
       targetPort: 9001
+      nodePort: 30001
