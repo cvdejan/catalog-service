@@ -11,6 +11,8 @@ data:
     spring:
       datasource:
         url: jdbc:postgresql://polar-postgres/polardb_catalog
+      username: postgres
+      password: password
       security:
         oauth2:
           resourceserver:
